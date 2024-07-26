@@ -11,8 +11,15 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.2.8",
+    "@mantine/charts": "^7.11.2",
+    "@mantine/core": "^7.11.2",
+    "@mantine/dates": "^7.11.2",
+    "@mantine/form": "^7.11.2",
+    "@mantine/hooks": "^7.11.2",
+    "dayjs": "^1.11.12",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "recharts": "2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
