@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import '@mantine/core/styles.css';
+
 
 // Import the layouts
 import RootLayout from "./layouts/RootLayout.tsx";
@@ -14,6 +16,11 @@ import ProfilePage from "./pages/profile-page";
 import CurrentlyReadingPage from "./pages/currently-reading-page";
 import ReadBooksPage from "./pages/read-books-page";
 import IndexPage from "./pages/index.tsx";
+import { createTheme, MantineProvider } from "@mantine/core";
+
+const theme = createTheme({
+  /** Your theme override here */
+});
 
 const router = createBrowserRouter([
   {
@@ -39,5 +46,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />
+  <MantineProvider theme={theme}>
+    <RouterProvider router={router} />
+  </MantineProvider>
 );
