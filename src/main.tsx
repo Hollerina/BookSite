@@ -10,9 +10,9 @@ import ProfileLayout from "./layouts/ProfileLayout.tsx";
 // Import the components
 import SignInPage from "./pages/sign-in/SignInPage.tsx";
 import SignUpPage from "./pages/sign-up/SignUpPage.tsx";
-import ProfilePage from "./pages/profile-page/ProfilePage.tsx";
-import CurrentlyReadingPage from "./pages/currently-reading-page/CurrentlyReadingPage.tsx";
-import ReadBooksPage from "./pages/read-books-page/ReadBooksPage.tsx";
+import ProfilePage from "./pages/profile-page";
+import CurrentlyReadingPage from "./pages/currently-reading-page";
+import ReadBooksPage from "./pages/read-books-page";
 import IndexPage from "./pages/index.tsx";
 
 const router = createBrowserRouter([
