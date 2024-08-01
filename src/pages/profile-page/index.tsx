@@ -1,3 +1,3 @@
-import ProfilePage from './ProfilePage.tsx'
+import ProfilePage from './ProfilePage'
 
 export default ProfilePage
