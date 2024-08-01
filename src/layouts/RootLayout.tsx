@@ -15,6 +15,8 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
 }
 
+//BOOK-7 move the NavBar element to here to display on every page
+
 export default function RootLayout() {
   const navigate = useNavigate();
 
