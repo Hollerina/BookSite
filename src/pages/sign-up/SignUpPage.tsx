@@ -1,5 +1,7 @@
 import { SignUp } from "@clerk/clerk-react";
 
-export default function SignUpPage() {
+const SignUpPage = () => {
   return <SignUp path="/sign-up" />;
-}
+};
+
+export default SignUpPage;
