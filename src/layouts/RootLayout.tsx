@@ -1,10 +1,7 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/clerk-react";
+import { ClerkProvider, SignedOut } from "@clerk/clerk-react";
+import NavBar from "../pages/components/NavBar";
+import styled from "styled-components";
 
 const PUBLISHABLE_KEY =
   "pk_test_YmVjb21pbmctYmx1ZWdpbGwtNjEuY2xlcmsuYWNjb3VudHMuZGV2JA";
@@ -15,7 +12,7 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
 }
 
-//BOOK-7 move the NavBar element to here to display on every page
+const Header = styled.header``;
 
 export default function RootLayout() {
   const navigate = useNavigate();
@@ -26,19 +23,13 @@ export default function RootLayout() {
       routerReplace={(to) => navigate(to, { replace: true })}
       publishableKey={PUBLISHABLE_KEY}
     >
-      <header className="header">
-        <div>
-          <div>
-            <p>Clerk + React + React Router App</p>
-          </div>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            <Link to="/sign-in">Sign In</Link>
-          </SignedOut>
-        </div>
-      </header>
+      <Header>
+        <NavBar />
+        <SignedOut>
+          <Link to="/sign-in">Sign In</Link>
+        </SignedOut>
+      </Header>
+
       <main>
         <Outlet />
       </main>
