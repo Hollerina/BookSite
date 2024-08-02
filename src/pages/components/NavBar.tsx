@@ -9,10 +9,12 @@ const NavBarContainer = styled.div`
   background-color: green;
   align-items: center;
   padding-top: 10px;
+  border-bottom: 1px solid;
 `;
 
 const AnchorContainer = styled.div`
   display: flex;
+  margin-bottom: -1px;
 `;
 
 const ProfileContainer = styled.div``;

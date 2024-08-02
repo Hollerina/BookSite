@@ -16,7 +16,6 @@ import IndexPage from "./pages/index.tsx";
 import { Anchor, createTheme, MantineProvider } from "@mantine/core";
 
 const theme = createTheme({
-  /** Your theme override here */
   components: {
     Anchor: Anchor.extend({
       styles: {
@@ -27,6 +26,9 @@ const theme = createTheme({
           marginLeft: "10px",
           borderTopLeftRadius: "5px",
           borderTopRightRadius: "5px",
+          borderLeft: "black solid 1px",
+          borderRight: "black solid 1px",
+          borderTop: "black solid 1px",
         },
       },
     }),
