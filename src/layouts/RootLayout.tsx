@@ -12,7 +12,9 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
 }
 
+
 const Header = styled.header``;
+
 
 export default function RootLayout() {
   const navigate = useNavigate();
