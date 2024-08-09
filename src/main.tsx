@@ -1,8 +1,6 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import '@mantine/core/styles.css';
-
+import "@mantine/core/styles.css";
 
 // Import the layouts
 import RootLayout from "./layouts/RootLayout.tsx";
@@ -15,10 +13,26 @@ import ProfilePage from "./pages/profile-page";
 import CurrentlyReadingPage from "./pages/currently-reading-page";
 import ReadBooksPage from "./pages/read-books-page";
 import IndexPage from "./pages/index.tsx";
-import { createTheme, MantineProvider } from "@mantine/core";
+import { Anchor, createTheme, MantineProvider } from "@mantine/core";
 
 const theme = createTheme({
-  /** Your theme override here */
+  components: {
+    Anchor: Anchor.extend({
+      styles: {
+        root: {
+          backgroundColor: "red",
+          color: "black",
+          padding: "20px",
+          marginLeft: "10px",
+          borderTopLeftRadius: "5px",
+          borderTopRightRadius: "5px",
+          borderLeft: "black solid 1px",
+          borderRight: "black solid 1px",
+          borderTop: "black solid 1px",
+        },
+      },
+    }),
+  },
 });
 
 const router = createBrowserRouter([
