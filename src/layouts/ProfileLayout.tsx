@@ -22,9 +22,6 @@ export default function ProfileLayout() {
     <>
       <header>
         <NavBar />
-        <SignedOut>
-          <Link to="/sign-in">Sign In</Link>
-        </SignedOut>
       </header>
       <Outlet />
     </>
