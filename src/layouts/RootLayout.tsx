@@ -1,6 +1,5 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { ClerkProvider, SignedOut } from "@clerk/clerk-react";
-import NavBar from "../pages/components/NavBar";
 
 const PUBLISHABLE_KEY =
   "pk_test_YmVjb21pbmctYmx1ZWdpbGwtNjEuY2xlcmsuYWNjb3VudHMuZGV2JA";
@@ -20,13 +19,9 @@ export default function RootLayout() {
       routerReplace={(to) => navigate(to, { replace: true })}
       publishableKey={PUBLISHABLE_KEY}
     >
-      <header>
-        <NavBar />
-        <SignedOut>
-          <Link to="/sign-in">Sign In</Link>
-        </SignedOut>
-      </header>
-
+      <SignedOut>
+        <Link to="/sign-in">Sign In</Link>
+      </SignedOut>
       <main>
         <Outlet />
       </main>

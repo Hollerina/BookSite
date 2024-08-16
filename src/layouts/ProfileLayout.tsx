@@ -1,6 +1,8 @@
 import * as React from "react";
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth, SignedOut } from "@clerk/clerk-react";
 import { Outlet, useNavigate } from "react-router-dom";
+import NavBar from "../pages/components/NavBar";
+import { Link } from "react-router-dom";
 
 export default function ProfileLayout() {
   const { userId, isLoaded } = useAuth();
@@ -16,5 +18,12 @@ export default function ProfileLayout() {
 
   if (!isLoaded) return "Loading...";
 
-  return <Outlet />;
+  return (
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <Outlet />
+    </>
+  );
 }

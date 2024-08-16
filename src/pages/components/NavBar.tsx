@@ -36,8 +36,6 @@ const InactiveAnchor = styled.a`
   color: black;
   padding: 20px;
   margin-left: 10px;
-  border-bottom-color: transparent;
-  margin-bottom: -1px;
   text-decoration: none;
 `;
 

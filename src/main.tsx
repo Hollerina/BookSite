@@ -13,27 +13,9 @@ import ProfilePage from "./pages/profile-page";
 import CurrentlyReadingPage from "./pages/currently-reading-page";
 import ReadBooksPage from "./pages/read-books-page";
 import IndexPage from "./pages/index.tsx";
-import { Anchor, createTheme, MantineProvider } from "@mantine/core";
+import { createTheme, MantineProvider } from "@mantine/core";
 
-const theme = createTheme({
-  components: {
-    Anchor: Anchor.extend({
-      styles: {
-        root: {
-          backgroundColor: "red",
-          color: "black",
-          padding: "20px",
-          marginLeft: "10px",
-          borderTopLeftRadius: "5px",
-          borderTopRightRadius: "5px",
-          borderLeft: "black solid 1px",
-          borderRight: "black solid 1px",
-          borderTop: "black solid 1px",
-        },
-      },
-    }),
-  },
-});
+const theme = createTheme({});
 
 const router = createBrowserRouter([
   {
