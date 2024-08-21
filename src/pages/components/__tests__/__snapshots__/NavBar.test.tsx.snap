@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should match the snapshot 1`] = `
+<div>
+  <div
+    class="sc-braxZu bzdGCH"
+  >
+    <div
+      class="sc-gJhJTp eUaePN"
+    >
+      <a
+        class="sc-fQpRED eiKtPW"
+        href="/profile"
+        target="_self"
+      >
+        Profile
+      </a>
+      <a
+        class="sc-fQpRED eiKtPW"
+        href="/profile/currently-reading"
+        target="_self"
+      >
+        Currently Reading
+      </a>
+      <a
+        class="sc-fQpRED eiKtPW"
+        href="/profile/read-books"
+        target="_self"
+      >
+        Read Books
+      </a>
+    </div>
+    <div
+      class="sc-dsLQwm"
+    />
+  </div>
+</div>
+`;
