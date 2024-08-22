@@ -1,12 +1,13 @@
-import { render } from "@testing-library/react";
+import { fireEvent, getByText, render } from "@testing-library/react";
 import NavBar from "../NavBar";
 import "@testing-library/jest-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { screen } from "@testing-library/react";
 
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <ClerkProvider
         routerPush={(to) => {}}
         routerReplace={(to) => {}}
@@ -16,7 +17,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
       >
         {children}
       </ClerkProvider>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 
@@ -32,5 +33,19 @@ describe("Navbar", () => {
     const { container } = render(<NavBar />, { wrapper: AllTheProviders });
 
     expect(container).toMatchSnapshot();
+  });
+  it.each([
+    ["/profile", "Profile"],
+    ["/profile/currently-reading", "Currently Reading"],
+    ["/profile/read-books", "Read Books"],
+  ])("should have a href %s when %s is clicked", (hrefLink, navbarTitle) => {
+    const { container } = render(<NavBar />, { wrapper: AllTheProviders });
+    const link = screen.getByText(navbarTitle);
+    fireEvent.click(link);
+
+    expect(screen.getByRole("link", { name: navbarTitle })).toHaveAttribute(
+      "href",
+      hrefLink
+    );
   });
 });

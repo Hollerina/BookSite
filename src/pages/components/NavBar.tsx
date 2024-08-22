@@ -1,7 +1,6 @@
 import { SignedIn, UserButton } from "@clerk/clerk-react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import React from "react";
 
 const NavBarContainer = styled.div`
   width: 100%;
