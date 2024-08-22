@@ -51,29 +51,45 @@ const Navbar = () => {
     <NavBarContainer>
       <AnchorContainer>
         {location.pathname === "/profile" ? (
-          <ActiveAnchor href="/profile" target="_self">
+          <ActiveAnchor href="/profile" target="_self" id="activeProfile">
             Profile
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile" target="_self">
+          <InactiveAnchor href="/profile" target="_self" id="inactiveProfile">
             Profile
           </InactiveAnchor>
         )}
         {location.pathname === "/profile/currently-reading" ? (
-          <ActiveAnchor href="/profile/currently-reading" target="_self">
+          <ActiveAnchor
+            href="/profile/currently-reading"
+            target="_self"
+            id="activeCurrentlyReading"
+          >
             Currently Reading
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile/currently-reading" target="_self">
+          <InactiveAnchor
+            href="/profile/currently-reading"
+            target="_self"
+            id="inactiveCurrentlyReading"
+          >
             Currently Reading
           </InactiveAnchor>
         )}
         {location.pathname === "/profile/read-books" ? (
-          <ActiveAnchor href="/profile/read-books" target="_self">
+          <ActiveAnchor
+            href="/profile/read-books"
+            target="_self"
+            id="activeReadBooks"
+          >
             Read Books
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile/read-books" target="_self">
+          <InactiveAnchor
+            href="/profile/read-books"
+            target="_self"
+            id="inactiveReadBooks"
+          >
             Read Books
           </InactiveAnchor>
         )}
