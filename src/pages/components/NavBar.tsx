@@ -50,11 +50,11 @@ const Navbar = () => {
     <NavBarContainer>
       <AnchorContainer>
         {location.pathname === "/profile" ? (
-          <ActiveAnchor href="/profile" target="_self" id="activeProfile">
+          <ActiveAnchor href="/profile" target="_self" className="active">
             Profile
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile" target="_self" id="inactiveProfile">
+          <InactiveAnchor href="/profile" target="_self" className="inactive">
             Profile
           </InactiveAnchor>
         )}
@@ -62,7 +62,7 @@ const Navbar = () => {
           <ActiveAnchor
             href="/profile/currently-reading"
             target="_self"
-            id="activeCurrentlyReading"
+            className="active"
           >
             Currently Reading
           </ActiveAnchor>
@@ -70,7 +70,7 @@ const Navbar = () => {
           <InactiveAnchor
             href="/profile/currently-reading"
             target="_self"
-            id="inactiveCurrentlyReading"
+            className="inactive"
           >
             Currently Reading
           </InactiveAnchor>
@@ -79,7 +79,7 @@ const Navbar = () => {
           <ActiveAnchor
             href="/profile/read-books"
             target="_self"
-            id="activeReadBooks"
+            className="active"
           >
             Read Books
           </ActiveAnchor>
@@ -87,7 +87,7 @@ const Navbar = () => {
           <InactiveAnchor
             href="/profile/read-books"
             target="_self"
-            id="inactiveReadBooks"
+            className="inactive"
           >
             Read Books
           </InactiveAnchor>

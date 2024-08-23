@@ -29,6 +29,7 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe("Navbar", () => {
+  //Snapshot doesn't render with CSS
   it("should match the snapshot", () => {
     const { container } = render(<NavBar />, { wrapper: AllTheProviders });
 
@@ -39,7 +40,7 @@ describe("Navbar", () => {
     ["/profile/currently-reading", "Currently Reading"],
     ["/profile/read-books", "Read Books"],
   ])("should have a href %s when %s is clicked", (hrefLink, navbarTitle) => {
-    const { container } = render(<NavBar />, { wrapper: AllTheProviders });
+    render(<NavBar />, { wrapper: AllTheProviders });
     const link = screen.getByText(navbarTitle);
     fireEvent.click(link);
 

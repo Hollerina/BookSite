@@ -9,25 +9,22 @@ exports[`Navbar should match the snapshot 1`] = `
       class="sc-gJhJTp eUaePN"
     >
       <a
-        class="sc-elDIKY iRzRGi"
+        class="sc-elDIKY iRzRGi active"
         href="/profile"
-        id="activeProfile"
         target="_self"
       >
         Profile
       </a>
       <a
-        class="sc-fQpRED eiKtPW"
+        class="sc-fQpRED eiKtPW inactive"
         href="/profile/currently-reading"
-        id="inactiveCurrentlyReading"
         target="_self"
       >
         Currently Reading
       </a>
       <a
-        class="sc-fQpRED eiKtPW"
+        class="sc-fQpRED eiKtPW inactive"
         href="/profile/read-books"
-        id="inactiveReadBooks"
         target="_self"
       >
         Read Books
