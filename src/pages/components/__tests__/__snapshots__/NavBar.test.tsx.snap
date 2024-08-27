@@ -1,29 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navbar should match the snapshot 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  background-color: green;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin-left: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: black solid 1px;
+  border-right: black solid 1px;
+  border-top: black solid 1px;
+  border-bottom-color: transparent;
+  margin-bottom: -1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  background-color: green;
+  color: black;
+  padding: 20px;
+  margin-left: 10px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div>
   <div
-    class="sc-braxZu bzdGCH"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="sc-gJhJTp eUaePN"
+      class="emotion-2 emotion-3"
     >
       <a
-        class="sc-elDIKY iRzRGi active"
+        class="active emotion-4 emotion-5"
         href="/profile"
         target="_self"
       >
         Profile
       </a>
       <a
-        class="sc-fQpRED eiKtPW inactive"
+        class="inactive emotion-6 emotion-7"
         href="/profile/currently-reading"
         target="_self"
       >
         Currently Reading
       </a>
       <a
-        class="sc-fQpRED eiKtPW inactive"
+        class="inactive emotion-6 emotion-7"
         href="/profile/read-books"
         target="_self"
       >
@@ -31,7 +81,7 @@ exports[`Navbar should match the snapshot 1`] = `
       </a>
     </div>
     <div
-      class="sc-dsLQwm"
+      class="emotion-10 emotion-11"
     />
   </div>
 </div>

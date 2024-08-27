@@ -1,7 +1,7 @@
-import { fireEvent, getByText, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import NavBar from "../NavBar";
 import "@testing-library/jest-dom";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { screen } from "@testing-library/react";
 
@@ -9,8 +9,8 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <MemoryRouter>
       <ClerkProvider
-        routerPush={(to) => {}}
-        routerReplace={(to) => {}}
+        routerPush={() => {}}
+        routerReplace={() => {}}
         publishableKey={
           "pk_test_YmVjb21pbmctYmx1ZWdpbGwtNjEuY2xlcmsuYWNjb3VudHMuZGV2JA"
         }
