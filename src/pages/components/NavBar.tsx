@@ -1,6 +1,6 @@
-import { SignedIn, UserButton } from "@clerk/clerk-react";
-import { useLocation } from "react-router-dom";
-import styled from "@emotion/styled";
+import { SignedIn, UserButton } from "@clerk/clerk-react"
+import { useLocation } from "react-router-dom"
+import styled from "@emotion/styled"
 
 const NavBarContainer = styled.div`
   width: 100%;
@@ -10,11 +10,11 @@ const NavBarContainer = styled.div`
   align-items: center;
   padding-top: 10px;
   border-bottom: 1px solid;
-`;
+`
 
 const AnchorContainer = styled.div`
   display: flex;
-`;
+`
 
 const ActiveAnchor = styled.a`
   background-color: white;
@@ -29,7 +29,7 @@ const ActiveAnchor = styled.a`
   border-bottom-color: transparent;
   margin-bottom: -1px;
   text-decoration: none;
-`;
+`
 
 const InactiveAnchor = styled.a`
   background-color: green;
@@ -37,14 +37,12 @@ const InactiveAnchor = styled.a`
   padding: 20px;
   margin-left: 10px;
   text-decoration: none;
-`;
+`
 
-const ProfileContainer = styled.div``;
+const ProfileContainer = styled.div``
 
 const Navbar = () => {
-  const location = useLocation();
-  console.log(location.pathname);
-  console.log(location.pathname === "/profile");
+  const location = useLocation()
 
   return (
     <NavBarContainer>
@@ -99,7 +97,7 @@ const Navbar = () => {
         </SignedIn>
       </ProfileContainer>
     </NavBarContainer>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

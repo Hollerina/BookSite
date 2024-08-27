@@ -4,22 +4,7 @@ import "@testing-library/jest-dom"
 import { MemoryRouter } from "react-router-dom"
 import { ClerkProvider } from "@clerk/clerk-react"
 import { screen } from "@testing-library/react"
-
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <MemoryRouter>
-      <ClerkProvider
-        routerPush={() => {}}
-        routerReplace={() => {}}
-        publishableKey={
-          "pk_test_YmVjb21pbmctYmx1ZWdpbGwtNjEuY2xlcmsuYWNjb3VudHMuZGV2JA"
-        }
-      >
-        {children}
-      </ClerkProvider>
-    </MemoryRouter>
-  )
-}
+import AllTheProviders from "../../../AllTheProviders"
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
@@ -35,6 +20,7 @@ describe("Navbar", () => {
 
     expect(container).toMatchSnapshot()
   })
+
   it.each([
     ["/profile", "Profile"],
     ["/profile/currently-reading", "Currently Reading"],

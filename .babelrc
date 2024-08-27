@@ -6,7 +6,6 @@
     ]
   ],
   "plugins": [
-    ["@emotion/babel-plugin"],
     [
       "@emotion",
       {
