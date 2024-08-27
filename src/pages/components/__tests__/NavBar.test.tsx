@@ -1,9 +1,8 @@
 import { fireEvent, render } from "@testing-library/react"
 import NavBar from "../NavBar"
 import "@testing-library/jest-dom"
-import { MemoryRouter } from "react-router-dom"
-import { ClerkProvider } from "@clerk/clerk-react"
 import { screen } from "@testing-library/react"
+import { axe, toHaveNoViolations } from "jest-axe"
 import AllTheProviders from "../../../AllTheProviders"
 
 jest.mock("react-router-dom", () => ({
@@ -13,8 +12,15 @@ jest.mock("react-router-dom", () => ({
   }),
 }))
 
+expect.extend(toHaveNoViolations)
+
 describe("Navbar", () => {
-  //Snapshot doesn't render with CSS
+  it("should render with no accessability issues", async () => {
+    const { container } = render(<NavBar />, { wrapper: AllTheProviders })
+    const results = await axe(container)
+
+    expect(results).toHaveNoViolations()
+  })
   it("should match the snapshot", () => {
     const { container } = render(<NavBar />, { wrapper: AllTheProviders })
 
