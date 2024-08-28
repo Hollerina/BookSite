@@ -1,6 +1,6 @@
-import { SignedIn, UserButton } from "@clerk/clerk-react";
-import { useLocation } from "react-router-dom";
-import styled from "styled-components";
+import { SignedIn, UserButton } from "@clerk/clerk-react"
+import { useLocation } from "react-router-dom"
+import styled from "@emotion/styled"
 
 const NavBarContainer = styled.div`
   width: 100%;
@@ -10,11 +10,11 @@ const NavBarContainer = styled.div`
   align-items: center;
   padding-top: 10px;
   border-bottom: 1px solid;
-`;
+`
 
 const AnchorContainer = styled.div`
   display: flex;
-`;
+`
 
 const ActiveAnchor = styled.a`
   background-color: white;
@@ -29,7 +29,7 @@ const ActiveAnchor = styled.a`
   border-bottom-color: transparent;
   margin-bottom: -1px;
   text-decoration: none;
-`;
+`
 
 const InactiveAnchor = styled.a`
   background-color: green;
@@ -37,42 +37,56 @@ const InactiveAnchor = styled.a`
   padding: 20px;
   margin-left: 10px;
   text-decoration: none;
-`;
+`
 
-const ProfileContainer = styled.div``;
+const ProfileContainer = styled.div``
 
 const Navbar = () => {
-  const location = useLocation();
-  console.log(location.pathname);
-  console.log(location.pathname === "/profile");
+  const location = useLocation()
 
   return (
     <NavBarContainer>
       <AnchorContainer>
         {location.pathname === "/profile" ? (
-          <ActiveAnchor href="/profile" target="_self">
+          <ActiveAnchor href="/profile" target="_self" className="active">
             Profile
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile" target="_self">
+          <InactiveAnchor href="/profile" target="_self" className="inactive">
             Profile
           </InactiveAnchor>
         )}
         {location.pathname === "/profile/currently-reading" ? (
-          <ActiveAnchor href="/profile/currently-reading" target="_self">
+          <ActiveAnchor
+            href="/profile/currently-reading"
+            target="_self"
+            className="active"
+          >
             Currently Reading
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile/currently-reading" target="_self">
+          <InactiveAnchor
+            href="/profile/currently-reading"
+            target="_self"
+            className="inactive"
+          >
             Currently Reading
           </InactiveAnchor>
         )}
         {location.pathname === "/profile/read-books" ? (
-          <ActiveAnchor href="/profile/read-books" target="_self">
+          <ActiveAnchor
+            href="/profile/read-books"
+            target="_self"
+            className="active"
+          >
             Read Books
           </ActiveAnchor>
         ) : (
-          <InactiveAnchor href="/profile/read-books" target="_self">
+          <InactiveAnchor
+            href="/profile/read-books"
+            target="_self"
+            className="inactive"
+          >
             Read Books
           </InactiveAnchor>
         )}
@@ -83,7 +97,7 @@ const Navbar = () => {
         </SignedIn>
       </ProfileContainer>
     </NavBarContainer>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
