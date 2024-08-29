@@ -17,9 +17,6 @@ const ProfilePageContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `
 
-// "books-owned" "books-owned" "want-to-read" "want-to-read"
-//     "to-be-read" "to-be-read" "other" "other";
-
 const ProfilePicture = styled.img`
   grid-area: profile-image;
 `
