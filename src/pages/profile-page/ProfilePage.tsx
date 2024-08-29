@@ -48,11 +48,9 @@ const OtherContainer = styled.div`
 const ProfilePage = () => {
   const { isLoaded, isSignedIn, user } = useUser()
 
-  console.log(user?.username)
-
   return (
     <ProfilePageContainer>
-      <ProfilePicture src={user?.imageUrl} />
+      <ProfilePicture src={user?.imageUrl} alt="User Profile Picture" />
       <ProfileDetailsContainer>heading</ProfileDetailsContainer>
       <FavouritesContainer> here</FavouritesContainer>
       <BooksOwnedContainer>Books I own</BooksOwnedContainer>
