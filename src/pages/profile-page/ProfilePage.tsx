@@ -1,7 +1,5 @@
 import { useUser } from "@clerk/clerk-react"
 import styled from "@emotion/styled"
-import { theme } from "../../Themeing"
-import { minMd } from "../../responsive"
 
 const ProfilePageContainer = styled.div`
   display: grid;
@@ -26,11 +24,9 @@ const ProfilePicture = styled.img`
 const ProfileDetailsContainer = styled.div`
   grid-area: profile-details;
   height: fit-content;
-  ${minMd("padding: 50px")}
 `
 const FavouritesContainer = styled.div`
   grid-area: favourites;
-  font-size: ${theme.fontSize.xl};
 `
 
 const BooksOwnedContainer = styled.div`
@@ -51,8 +47,6 @@ const OtherContainer = styled.div`
 
 const ProfilePage = () => {
   const { isLoaded, isSignedIn, user } = useUser()
-
-  console.log(theme.fontSize.xxl)
 
   return (
     <ProfilePageContainer>
