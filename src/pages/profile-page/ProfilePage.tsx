@@ -1,5 +1,6 @@
 import { useUser } from "@clerk/clerk-react"
 import styled from "@emotion/styled"
+import { theme } from "../../styling/Themeing"
 
 const ProfilePageContainer = styled.div`
   display: grid;

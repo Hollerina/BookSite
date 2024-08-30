@@ -1,15 +1,16 @@
 import { SignedIn, UserButton } from "@clerk/clerk-react"
 import { useLocation } from "react-router-dom"
 import styled from "@emotion/styled"
+import { theme } from "../../styling/Themeing"
 
 const NavBarContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: green;
+  background-color: ${theme.colours.accentColours.Glaucous};
   align-items: center;
-  padding-top: 10px;
-  border-bottom: 1px solid;
+  padding-top: 8px;
+  border-bottom: ${theme.colours.blacks.smokeyBlack} 1px solid;
 `
 
 const AnchorContainer = styled.div`
@@ -17,26 +18,37 @@ const AnchorContainer = styled.div`
 `
 
 const ActiveAnchor = styled.a`
-  background-color: white;
+  background-color: ${theme.colours.backgroundColours.babyPowder};
   color: black;
-  padding: 20px;
-  margin-left: 10px;
+  padding: 11px 12px;
+  margin-left: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border-left: black solid 1px;
-  border-right: black solid 1px;
-  border-top: black solid 1px;
+  border-left: ${theme.colours.blacks.smokeyBlack} solid 1px;
+  border-right: ${theme.colours.blacks.smokeyBlack} solid 1px;
+  border-top: ${theme.colours.blacks.smokeyBlack} solid 1px;
   border-bottom-color: transparent;
   margin-bottom: -1px;
   text-decoration: none;
+  width: 157px;
+  text-align: center;
 `
 
 const InactiveAnchor = styled.a`
-  background-color: green;
-  color: black;
-  padding: 20px;
-  margin-left: 10px;
+  background-color: ${theme.colours.accentColours.Glaucous};
+  color: ${theme.colours.backgroundColours.babyPowder};
+  padding: 11px 12px;
+  margin-left: 5px;
   text-decoration: none;
+  width: 157px;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: ${theme.colours.backgroundColours.isabelline};
+  }
 `
 
 const ProfileContainer = styled.div``
