@@ -13,7 +13,14 @@ export default function ProfileLayout() {
     }
   }, [isLoaded])
 
-  if (!isLoaded) return "Loading..."
+  if (!isLoaded) {
+    return (
+      <>
+        <NavBar />
+        Loading...
+      </>
+    )
+  }
 
   return (
     <>
