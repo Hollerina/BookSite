@@ -22,4 +22,14 @@ export const theme = {
     bold: 700,
     extraBold: 800,
   },
+  colours: {
+    backgroundColours: {
+      babyPowder: "#FAF9F6",
+      isabelline: "#F7F5F0",
+    },
+    accentColours: { Glaucous: "#58719D" },
+    blacks: {
+      smokeyBlack: "#090C02",
+    },
+  },
 }
