@@ -15,15 +15,16 @@ const NavBarContainer = styled.div`
 
 const AnchorContainer = styled.div`
   display: flex;
+  font-size: ${theme.fontSize.md};
 `
 
 const ActiveAnchor = styled.a`
   background-color: ${theme.colours.backgroundColours.babyPowder};
   color: black;
-  padding: 11px 12px;
+  padding: 12px;
   margin-left: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border-left: ${theme.colours.blacks.smokeyBlack} solid 1px;
   border-right: ${theme.colours.blacks.smokeyBlack} solid 1px;
   border-top: ${theme.colours.blacks.smokeyBlack} solid 1px;
@@ -32,18 +33,25 @@ const ActiveAnchor = styled.a`
   text-decoration: none;
   width: 157px;
   text-align: center;
+  font-weight: ${theme.fontWeight.normal}
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: ${theme.colours.blacks.night};
+  }
 `
 
 const InactiveAnchor = styled.a`
   background-color: ${theme.colours.accentColours.Glaucous};
   color: ${theme.colours.backgroundColours.babyPowder};
-  padding: 11px 12px;
+  padding: 12px;
   margin-left: 5px;
   text-decoration: none;
   width: 157px;
   text-align: center;
-
-  &:hover {
+  font &:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 2px;
