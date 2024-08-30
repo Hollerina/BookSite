@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfilePage should render with no accesability violations and render correctly on desktop 1`] = `
+.emotion-0 {
+  display: grid;
+  max-width: 1284px;
+  padding: 24px 16px;
+  margin: auto;
+  gap: 10px 20px;
+  justify-items: center;
+  grid-template-areas: "profile-image profile-details profile-details profile-details" "favourites favourites favourites favourites" "books-owned books-owned want-to-read want-to-read" "to-be-read to-be-read other other";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.emotion-2 {
+  grid-area: profile-image;
+}
+
+.emotion-4 {
+  grid-area: profile-details;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.emotion-6 {
+  grid-area: favourites;
+}
+
+.emotion-8 {
+  grid-area: books-owned;
+}
+
+.emotion-10 {
+  grid-area: want-to-read;
+}
+
+.emotion-12 {
+  grid-area: to-be-read;
+}
+
+.emotion-14 {
+  grid-area: other;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <img
+      alt="User Profile Picture"
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      heading
+    </div>
+    <div
+      class="emotion-6 emotion-7"
+    >
+       here
+    </div>
+    <div
+      class="emotion-8 emotion-9"
+    >
+      Books I own
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    >
+      Want to read
+    </div>
+    <div
+      class="emotion-12 emotion-13"
+    >
+      To be read
+    </div>
+    <div
+      class="emotion-14 emotion-15"
+    >
+      Other
+    </div>
+  </div>
+</div>
+`;
