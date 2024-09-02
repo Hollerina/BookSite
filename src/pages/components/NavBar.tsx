@@ -33,7 +33,6 @@ const ActiveAnchor = styled.a`
   text-decoration: none;
   width: 157px;
   text-align: center;
-  font-weight: ${theme.fontWeight.normal}
 
   &:hover {
     text-decoration: underline;
@@ -51,7 +50,8 @@ const InactiveAnchor = styled.a`
   text-decoration: none;
   width: 157px;
   text-align: center;
-  font &:hover {
+
+  &:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 2px;
