@@ -30,6 +30,7 @@ export const theme = {
     accentColours: { Glaucous: "#58719D" },
     blacks: {
       smokeyBlack: "#090C02",
+      night: "#0A0D05",
     },
   },
 }
