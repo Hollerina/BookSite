@@ -2,6 +2,9 @@ import { SignedIn, UserButton } from "@clerk/clerk-react"
 import { useLocation } from "react-router-dom"
 import styled from "@emotion/styled"
 import { theme } from "../../styling/Themeing"
+import { maxLg } from "../../styling/Responsive"
+import { Burger, Drawer } from "@mantine/core"
+import { useDisclosure } from "@mantine/hooks"
 
 const NavBarContainer = styled.div`
   width: 100%;
@@ -11,11 +14,15 @@ const NavBarContainer = styled.div`
   align-items: center;
   padding-top: 8px;
   border-bottom: ${theme.colours.blacks.smokeyBlack} 1px solid;
+
+  ${maxLg("padding-top: 0px")}
 `
 
 const AnchorContainer = styled.div`
   display: flex;
   font-size: ${theme.fontSize.md};
+
+  ${maxLg("display: none;")};
 `
 
 const ActiveAnchor = styled.a`
@@ -59,10 +66,32 @@ const InactiveAnchor = styled.a`
   }
 `
 
-const ProfileContainer = styled.div``
+const BurgerContainer = styled.div`
+  display: none;
+  padding: 12px;
+
+  ${maxLg("display: flex;")};
+`
+
+const BurgerAnchorActive = styled.a``
+
+const Bsub = styled(Drawer)`
+  padding: 300px;
+`
+
+const ProfileContainer = styled.div`
+  padding: 10px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+`
 
 const Navbar = () => {
   const location = useLocation()
+
+  //Toggle will change the boolean value of opened to be the opposite of what it currently is
+  const [opened, { open, close }] = useDisclosure()
 
   return (
     <NavBarContainer>
@@ -111,6 +140,20 @@ const Navbar = () => {
           </InactiveAnchor>
         )}
       </AnchorContainer>
+      <BurgerContainer>
+        <Drawer opened={opened} onClose={close} title="NavBar" position="left">
+          <BurgerAnchorActive href="/profile" target="_self" className="active">
+            Profile
+          </BurgerAnchorActive>
+        </Drawer>
+        <Burger
+          opened={opened}
+          onClick={open}
+          aria-label="Toggle navigation"
+          color="#FAF9F6"
+          lineSize={2}
+        ></Burger>
+      </BurgerContainer>
       <ProfileContainer>
         <SignedIn>
           <UserButton />
