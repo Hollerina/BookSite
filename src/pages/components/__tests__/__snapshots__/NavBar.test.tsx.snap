@@ -10,13 +10,19 @@ exports[`Navbar should match the snapshot 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  background-color: green;
+  background-color: #58719D;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 10px;
-  border-bottom: 1px solid;
+  padding-top: 8px;
+  border-bottom: #090C02 1px solid;
+}
+
+@media (max-width:960px) {
+  .emotion-0 {
+    padding-top: 0px;
+  }
 }
 
 .emotion-2 {
@@ -24,34 +30,96 @@ exports[`Navbar should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-size: 1rem;
+}
+
+@media (max-width:960px) {
+  .emotion-2 {
+    display: none;
+  }
 }
 
 .emotion-4 {
-  background-color: white;
+  background-color: #FAF9F6;
   color: black;
-  padding: 20px;
-  margin-left: 10px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-left: black solid 1px;
-  border-right: black solid 1px;
-  border-top: black solid 1px;
+  padding: 12px;
+  margin-left: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-left: #090C02 solid 1px;
+  border-right: #090C02 solid 1px;
+  border-top: #090C02 solid 1px;
   border-bottom-color: transparent;
   margin-bottom: -1px;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: 157px;
+  text-align: center;
+}
+
+.emotion-4:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #0A0D05;
 }
 
 .emotion-6 {
-  background-color: green;
-  color: black;
-  padding: 20px;
-  margin-left: 10px;
+  background-color: #58719D;
+  color: #FAF9F6;
+  padding: 12px;
+  margin-left: 5px;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: 157px;
+  text-align: center;
+}
+
+.emotion-6:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #F7F5F0;
+}
+
+.emotion-10 {
+  display: none;
+  padding: 12px;
+}
+
+@media (max-width:960px) {
+  .emotion-10 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.emotion-12 {
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
   <div
     class="emotion-0 emotion-1"
   >
@@ -82,6 +150,22 @@ exports[`Navbar should match the snapshot 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
+    >
+      <button
+        aria-label="Toggle navigation"
+        class="mantine-focus-auto m_fea6bf1a mantine-Burger-root m_87cf2631 mantine-UnstyledButton-root"
+        color="#FAF9F6"
+        style="--burger-color: #FAF9F6; --burger-line-size: calc(0.125rem * var(--mantine-scale));"
+        type="button"
+      >
+        <div
+          class="m_d4fb9cad mantine-Burger-burger"
+          data-reduce-motion="true"
+        />
+      </button>
+    </div>
+    <div
+      class="emotion-12 emotion-13"
     />
   </div>
 </div>

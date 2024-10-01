@@ -15,6 +15,20 @@ jest.mock("react-router-dom", () => ({
 expect.extend(toHaveNoViolations)
 
 describe("Navbar", () => {
+  //Work around for mocking problems - might be able to have in seperate file
+  beforeAll(() => {
+    Object.defineProperty(window, "matchMedia", {
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    })
+  })
   it("should render with no accessability issues", async () => {
     const { container } = render(<NavBar />, { wrapper: AllTheProviders })
     const results = await axe(container)
