@@ -1,6 +1,7 @@
 import { useUser } from "@clerk/clerk-react"
 import styled from "@emotion/styled"
 import { theme } from "../../styling/Themeing"
+import { maxMd } from "../../styling/Responsive"
 
 const ProfilePageContainer = styled.div`
   display: grid;
@@ -16,6 +17,17 @@ const ProfilePageContainer = styled.div`
     "books-owned books-owned want-to-read want-to-read"
     "to-be-read to-be-read other other";
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  ${maxMd(`  
+    grid-template-areas:
+    "profile-image"
+    "profile-details"
+    "favourites"
+    "books-owned"
+    "want-to-read"
+    "to-be-read"
+    "other";
+  grid-template-columns: 1fr;`)}
 `
 
 const ProfilePicture = styled.img`

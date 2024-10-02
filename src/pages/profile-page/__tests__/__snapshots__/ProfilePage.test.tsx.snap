@@ -12,6 +12,13 @@ exports[`ProfilePage should render with no accesability violations and render co
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+@media (max-width:768px) {
+  .emotion-0 {
+    grid-template-areas: "profile-image" "profile-details" "favourites" "books-owned" "want-to-read" "to-be-read" "other";
+    grid-template-columns: 1fr;
+  }
+}
+
 .emotion-2 {
   grid-area: profile-image;
 }
