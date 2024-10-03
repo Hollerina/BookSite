@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useAuth } from "@clerk/clerk-react"
 import { Outlet, useNavigate } from "react-router-dom"
-import NavBar from "../pages/components/NavBar"
+import NavBar from "../pages/components/navBar/NavBar"
 import styled from "@emotion/styled"
 import { theme } from "../styling/Themeing"
 
