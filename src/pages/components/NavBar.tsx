@@ -7,6 +7,17 @@ import { Burger, Drawer } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import Icon from "./Icons"
 
+const HeaderTitle = styled.h1`
+  color: ${theme.colours.backgroundColours.babyPowder};
+  margin-bottom: -1px;
+  margin-top: 0;
+  padding: 0 20px;
+`
+
+const DesktopContainer = styled.div`
+  display: flex;
+`
+
 const NavBarContainer = styled.div`
   width: 100%;
   display: flex;
@@ -125,51 +136,6 @@ const Navbar = () => {
 
   return (
     <NavBarContainer>
-      <AnchorContainer>
-        {location.pathname === "/profile" ? (
-          <ActiveAnchor href="/profile" target="_self" className="active">
-            Profile
-          </ActiveAnchor>
-        ) : (
-          <InactiveAnchor href="/profile" target="_self" className="inactive">
-            Profile
-          </InactiveAnchor>
-        )}
-        {location.pathname === "/profile/currently-reading" ? (
-          <ActiveAnchor
-            href="/profile/currently-reading"
-            target="_self"
-            className="active"
-          >
-            Currently Reading
-          </ActiveAnchor>
-        ) : (
-          <InactiveAnchor
-            href="/profile/currently-reading"
-            target="_self"
-            className="inactive"
-          >
-            Currently Reading
-          </InactiveAnchor>
-        )}
-        {location.pathname === "/profile/read-books" ? (
-          <ActiveAnchor
-            href="/profile/read-books"
-            target="_self"
-            className="active"
-          >
-            Read Books
-          </ActiveAnchor>
-        ) : (
-          <InactiveAnchor
-            href="/profile/read-books"
-            target="_self"
-            className="inactive"
-          >
-            Read Books
-          </InactiveAnchor>
-        )}
-      </AnchorContainer>
       <BurgerContainer>
         <BurgerDrawer
           opened={opened}
@@ -242,6 +208,54 @@ const Navbar = () => {
           lineSize={2}
         ></Burger>
       </BurgerContainer>
+      <DesktopContainer>
+        <HeaderTitle>BookSite</HeaderTitle>
+        <AnchorContainer>
+          {location.pathname === "/profile" ? (
+            <ActiveAnchor href="/profile" target="_self" className="active">
+              Profile
+            </ActiveAnchor>
+          ) : (
+            <InactiveAnchor href="/profile" target="_self" className="inactive">
+              Profile
+            </InactiveAnchor>
+          )}
+          {location.pathname === "/profile/currently-reading" ? (
+            <ActiveAnchor
+              href="/profile/currently-reading"
+              target="_self"
+              className="active"
+            >
+              Currently Reading
+            </ActiveAnchor>
+          ) : (
+            <InactiveAnchor
+              href="/profile/currently-reading"
+              target="_self"
+              className="inactive"
+            >
+              Currently Reading
+            </InactiveAnchor>
+          )}
+          {location.pathname === "/profile/read-books" ? (
+            <ActiveAnchor
+              href="/profile/read-books"
+              target="_self"
+              className="active"
+            >
+              Read Books
+            </ActiveAnchor>
+          ) : (
+            <InactiveAnchor
+              href="/profile/read-books"
+              target="_self"
+              className="inactive"
+            >
+              Read Books
+            </InactiveAnchor>
+          )}
+        </AnchorContainer>
+      </DesktopContainer>
       <ProfileContainer>
         <SignedIn>
           <UserButton />
