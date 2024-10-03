@@ -3,7 +3,7 @@ import NavBar from "../NavBar"
 import "@testing-library/jest-dom"
 import { screen } from "@testing-library/react"
 import { axe, toHaveNoViolations } from "jest-axe"
-import AllTheProviders from "../../../AllTheProviders"
+import AllTheProviders from "../../../../AllTheProviders"
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
